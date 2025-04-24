@@ -43,6 +43,16 @@ MediaSDK is mainly used for stitching panoramic materials. The currently support
 | Image    | insp/jpeg     | jpg           |
 
 # **Function Overview**
+* [Initialize SDK Environment](#initialize-sdk-environment)
+* [Input and Output Parameter Settings](#input-and-output-parameter-settings)
+* [Stabilization Parameter Settings](#stabilization-parameter-settings)
+* [Stitching Parameter Settings](#stitching-parameter-settings)
+* [Image Setting Parameters](#image-setting-parameters)
+* [Stitching Process](#stitching-process)
+* [Logging Functionality](#logging-functionality)
+* [Hardware Codec Acceleration](#hardware-codec-acceleration)
+* [Live stream preview splicing](#live-stream-preview-splicing)
+* [Error Codes](#error-codes)
 
 # **Notes**
 
