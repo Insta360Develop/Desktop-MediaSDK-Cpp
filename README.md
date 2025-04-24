@@ -418,13 +418,13 @@ This API is used to **set the logging level** within the SDK.
 
 ## **Hardware Codec Acceleration**
 
-## **Live stream preview splicing**
+## **Live stream preview stitching**
 
 ###  Environmental preparation
 
  Camera stitch preview is based on CameraSDK and MediaSDK together. Header File is located in `MediaSDK_ROOT/include/ins_realtime_stitcher.`
 
- The main function of CameraSDK is to provide splicing parameters, video data, anti-shake data, and exposure data.
+ The main function of CameraSDK is to provide stitching parameters, video data, anti-shake data, and exposure data.
 
  The main function of MediaSDK is to use the parameters and data provided by cameraSDK to stitch together images and generate a 2:1 panoramic image.
 
@@ -437,10 +437,10 @@ This API is used to **set the logging level** within the SDK.
 // Cam is the current camera instance object
 auto preview_param = cam->GetPreviewParam();
 
-// Create a splicing instance object
+// Create a stitching instance object
 auto stitcher = std::make_shared<ins::RealTimeStitcher>();
 
-// Set preview parameters for splicing instance objects
+// Set preview parameters for stitching instance objects
 ins::CameraInfo camera_info;
 camera_info.cameraName = preview_param.camera_name;
 camera_info.decode_type = static_cast<ins::VideoDecodeType>(preview_param.encode_type);
@@ -500,7 +500,7 @@ private:
 
 ###  Set preview parameters
 
-####   Splicing type
+####   stitching type
 
   Reference 4.4.1 and 4.4.2.
 
@@ -551,7 +551,7 @@ if (cam->StartLiveStreaming(param)) {
 ```c++
 // Close camera preview stream
 if (cam->StopLiveStreaming()) {
-// Stop the splicing process
+// Stop the stitching process
     stitcher->CancelStitch();
     std::cout << "success!" << std::endl;
 }
