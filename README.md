@@ -518,11 +518,11 @@ private:
 
   If the performance output frame rate, the resolution size can be reduced.
 
-### Get spliced data
+### Get stitched data
 
- The currently supported format for spliced data is RGBA.
+ The currently supported format for stitched data is RGBA.
 
- You can get the spliced video picture by setting `SetStitchRealTimeDataCallback` this callback interface. It is recommended not to perform time-consuming operations in this callback. The reference code is as follows:
+ You can get the stitched video picture by setting `SetStitchRealTimeDataCallback` this callback interface. It is recommended not to perform time-consuming operations in this callback. The reference code is as follows:
 
 ```c++
 stitcher->SetStitchRealTimeDataCallback([&](uint8_t* data[4], int linesize[4], int width, int height, int format, int64_t timestamp) {
