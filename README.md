@@ -50,7 +50,8 @@ The SDK requires that all file path strings must be encoded in UTF-8.
 
 # **API Description**
 
-##  **Initialize SDK Environment:void InitEnv() (GPU Version)**
+##  **Initialize SDK Environment**
+void InitEnv() (GPU Version)
 
 This API must be called at the start of the main program to initialize the SDK environment.
 
