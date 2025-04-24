@@ -44,35 +44,30 @@ MediaSDK is mainly used for stitching panoramic materials. The currently support
 
 # **Function Overview**
 
-* **Stitching Methods**
+* 
+- [Stitching Methods](#Stitching-Methods)
+  - [Template Stitching](#Template-Stitching)
+  - [Dynamic Stitching](#Dynamic-Stitching)
+  - [Optical Flow Stitching](#Optical-Flow-Stitching)
+  - [AI Stitching](#AI-Stitching)
 
-  * **Template Stitching**
+- [Stabilization Features](#Stabilization-Features)
+  - [Standard Stabilization (FlowState)](#Standard-Stabilization-FlowState)
+  - [Direction Lock](#Direction-Lock)
 
-  * **Dynamic Stitching**
+- [Color Plus](#Color-Plus)
 
-  * **Optical Flow Stitching**
+- [Chromatic Calibration](#Chromatic-Calibration)
 
-  * **AI Stitching**
+- [Denoise](#Denoise)
 
-* **Stabilization Features**
+- [Support for Lens Guard Options](#Support-for-Lens-Guard-Options)
 
-  * **Standard Stabilization (FlowState)**
+- [Support for Exporting Video as Image Sequences](#Support-for-Exporting-Video-as-Image-Sequences)
 
-  * **Direction Lock**
+- [Support for Exporting Selected Frames from Video](#Support-for-Exporting-Selected-Frames-from-Video)
 
-* **Color Plus**
-
-* **Chromatic Calibration**
-
-* **Denoise**
-
-* **Support for Lens Guard Options**
-
-* **Support for Exporting Video as Image Sequences**
-
-* **Support for Exporting Selected Frames from Video**
-
-* **Logging Functionality**
+- [Logging Functionality](#Logging-Functionality)
 
 
 
