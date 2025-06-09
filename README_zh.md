@@ -317,6 +317,8 @@ video_stitcher->SetStitchStateCallback([&](int error, const char* errinfo) {
 
 **MediaSDK**的主要功能使用cameraSDK提供的参数以及数据进行画面的拼接，生成一个2:1的全景画面。
 
+可以参考MediaSDK_ROOT/example/realtime_stitcher_demo.cc
+
 ### 预览参数获取和设置
 
 ```c++
