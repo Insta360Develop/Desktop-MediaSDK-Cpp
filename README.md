@@ -233,7 +233,11 @@ When using **AI Stitching**, you must call the **SetAiStitchModelFile** API to s
 
 This API is used to set the AI stitching model, which is required for AI stitching.
 
-> **Model File Example:&#x20;**&#x4D;ediaSDK/modelfile/ai\_stitch\_model.ins
+> Model file v1: SDK_ROOT_DIR/data/ai_stitch_model_v1.ins
+> 
+> Model file v2: SDK_ROOT_DIR/data/ai_stitch_model_v2.ins
+
+For materials before X4 camera, use the v1 version of the model file. For materials of X5 camera, use the v2 version of the model file
 
 
 
@@ -241,19 +245,11 @@ This API is used to set the AI stitching model, which is required for AI stitchi
 
 This API is used to enable Chromatic Calibration.
 
-
-
-**Causes of Chromatic Aberration:&#x20;**&#x53;ince the two lenses operate separately, the video exposure captured by each lens may be slightly different. When stitched together, **noticeable brightness differences** may appear. Additionally, due to different lighting conditions on each side of the lens, the camera exposure may vary. Sometimes, the front lens captures a significantly different brightness level compared to the rear lens. This effect is especially prominent in areas with **high contrast lighting conditions**.
-
-The chromatic calibration function is developed to address such issues.
-
-
+Causes of chromatic aberration: The two lenses are separate, and the resulting video exposure may not be consistent. When they are stitched together, there will be a more obvious brightness difference. In addition, because the lighting on both sides of the lens is different, the camera exposure is different, and sometimes the pictures taken by the front and back lenses will also have a significant brightness difference. This phenomenon is particularly obvious in places with large light difference ratios. Achromatic aberration is developed to solve this problem.
 
 ### **Lens Guard: void SetCameraAccessoryType(CameraAccessoryType type)**
 
 This API is used to **set the lens guard type**. If a lens guard is used during shooting, it must also be specified when stitching. Otherwise, the stabilization effect may be incorrect.
-
-
 
 The following are the available **lens guard types**:
 
@@ -295,7 +291,7 @@ This API is used to enable or disable the **Color Plus** function. This is an **
 
 This API is used to **enable or disable** the denoising feature.
 
-**Video denoise&#x20;**&#x65;mploy&#x73;**&#x20;image processing techniques** and is based on **multi-frame denoising** to reduce or eliminate noise in videos. Compared to **single-frame denoising**, multi-frame denoising **leverages redundant information from multiple frames**, but it also **requires more computing resources** and **slows down export speed**.
+Multi-frame denoising is used in the video. It is a process of reducing or removing noise in the video through image processing technology. Compared with single-frame denoising, video denoising often uses redundant information of multiple frames before and after. It also consumes performance and slows down the export speed.
 
 For **image materials**, the **model file path** should be specified.
 
