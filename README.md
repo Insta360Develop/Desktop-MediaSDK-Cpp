@@ -407,7 +407,7 @@ This API is used to **set the logging level** within the SDK.
 
  The main function of MediaSDK is to use the parameters and data provided by cameraSDK to stitch together images and generate a 2:1 panoramic image.
  
- Please refer to MediaSDK_ROOT/example/realtime_stitcher_demo.cc
+ Please refer to `MediaSDK_ROOT/example/realtime_stitcher_demo.cc`
  
 ###  Preview parameter acquisition and setting
 
