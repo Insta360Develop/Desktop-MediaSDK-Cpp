@@ -183,6 +183,9 @@ enum class STITCH_TYPE {
 这个接口用于设置AI拼接的模型,配合AI拼接使用
 
 > 模型文件：SDK\_ROOT\_DIR/data/ai\_stitch\_model.ins
+> 模型文件v2：SDK_ROOT_DIR/data/ai_stitch_model_v2.ins
+
+对于这个X4相机之前的素材，使用v1版本的模型文件。对于X5相机的素材，使用v2版本的模型文件
 
 ### 消色差: void EnableStitchFusion(bool enable)
 
