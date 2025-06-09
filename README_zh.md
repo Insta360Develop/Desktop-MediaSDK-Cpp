@@ -182,7 +182,7 @@ enum class STITCH_TYPE {
 
 这个接口用于设置AI拼接的模型,配合AI拼接使用
 
-> 模型文件：SDK\_ROOT\_DIR/data/ai\_stitch\_model.ins
+> 模型文件v1：SDK_ROOT_DIR/data/ai_stitch_model_v1.ins
 > 
 > 模型文件v2：SDK_ROOT_DIR/data/ai_stitch_model_v2.ins
 
