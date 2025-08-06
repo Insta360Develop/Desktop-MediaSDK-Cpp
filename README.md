@@ -1,3 +1,7 @@
+# Note
+
+GPU is required in version 3.x.x
+
 # How to get?
 
 Please visit https://www.insta360.com/sdk/apply to apply for the latest SDK.
