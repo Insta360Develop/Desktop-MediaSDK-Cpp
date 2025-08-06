@@ -1,3 +1,6 @@
+# 注意
+在3.x.x版本中必须使用GPU
+
 # 文档概述
 
 ​        MediaSDK主要用于对全景素材进行拼接，目前支持的机型有ONE X、ONE R/RS(普通鱼眼和一英寸鱼眼)、ONE X2、X3、X4以及X5相机的全景素材。支持视频导出和图片导出。支持平台主要有Windows和Ubuntu 22.04平台。具体接口的使用可以参考SDK中example/main.cc.
