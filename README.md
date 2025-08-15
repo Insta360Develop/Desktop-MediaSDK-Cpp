@@ -564,3 +564,39 @@ if (cam->StopLiveStreaming()) {
 | E_VIDEO_FRAME_EXPORTOR(9) | Failed to create video frame exporter                        |
 | E_UNKNOWN(999)            | Unknown error, please provide detailed information for analysis |
 
+# FAQ
+How to write a Dockerfile if using Docker
+```
+FROM nvidia/cuda:12.1.1-devel-ubuntu22.04
+# Environment variables
+# ENV __NV_PRIME_RENDER_OFFLOAD=1
+# ENV __GLX_VENDOR_LIBRARY_NAME=nvidia
+RUN apt-get update && apt-get install -y \
+    gnupg \
+    software-properties-common \
+    libtiff5 \
+    libegl1 \
+    libxext6 \
+    libvulkan1 \
+    freeglut3-dev \
+    vulkan-tools \
+    libdc1394-25 
+# Copy application code
+COPY libMediaSDK-dev-3.0.3.3-20250616_094659-amd64.deb /home/
+COPY VID_20221010_123325_00_064.insv /home/
+COPY VID_20221010_123325_10_064.insv /home/
+RUN cd /home
+RUN apt-get update 
+RUN VULKAN_API_VERSION=$(dpkg -s libvulkan1 | grep -oP 'Version: [0-9|\.]+' | grep -oP '[0-9]+(\.[0-9]+)(\.[0-9]+)') && \
+    mkdir -pm755 /etc/vulkan/icd.d/ && echo "{\
+    \"file_format_version\" : \"1.0.0\",\
+    \"ICD\": {\
+        \"library_path\": \"libGLX_nvidia.so.0\",\
+        \"api_version\" : \"${VULKAN_API_VERSION}\"\
+    }}" > /etc/vulkan/icd.d/nvidia_icd.json && \
+    mkdir -pm755 /usr/share/glvnd/egl_vendor.d/ && echo "{\
+    \"file_format_version\" : \"1.0.0\",\
+    \"ICD\": {\
+        \"library_path\": \"libEGL_nvidia.so.0\"\
+    }}" > /usr/share/glvnd/egl_vendor.d/10_nvidia.json
+```
