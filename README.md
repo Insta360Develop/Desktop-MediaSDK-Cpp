@@ -16,11 +16,11 @@ Issue Report: https://insta.jinshuju.com/f/hZ4aMW
 
 # [中文文档](README_zh.md)
 
-# **Overview**
+# Overview
 
 MediaSDK is mainly used for stitching panoramic materials. The currently supported device models include: **ONE X, ONE R/RS** (Standard fisheye and one-inch fisheye), **ONE X2, X3, X4, X4 Air, X5** cameras for panoramic materials. This SDK supports **video export** and **image export**. The main supported platforms are **Windows** and **Ubuntu 22.04**. For specific API usage, please refer to MediaSDK/example/main.cc.
 
-- **Supported cameras**
+- Supported cameras
 
 | Model                                    | Link                                                      |
 | :--------------------------------------- | :-------------------------------------------------------- |
