@@ -120,7 +120,7 @@ This API is used to set the output path. It is valid for both video and photo ou
 
 > For images, the path should end with .jpg  **Example:** /output/to/path/image.jpg
 
-### **Output Resolution: **
+### Output Resolution: 
 
 `void SetOutputSize(int width, int height)`
 
@@ -130,7 +130,7 @@ For the **CPU version of the SDK**, if a resolution that is too small is set and
 
 
 
-### **Encoding Format: **
+### Encoding Format: 
 
 `void EnableH265Encoder()`
 
@@ -138,7 +138,7 @@ This API is used to set the encoding format to **H.265**. The default encoding f
 
 When the output resolution is **greater than 4K**, it is **recommended to use H.265 encoding**, as **H.265 encoding supports hardware acceleration**, which can **speed up the export process**.
 
-### **Output Bitrate: **
+### Output Bitrate: 
 
 `void SetOutputBitRate(int64\_t bitRate)`
 
@@ -150,7 +150,7 @@ If not set, the original video bitrate will be used by default.
 >
 > To output at **60 Mbps**, set the value as follows: bitRate = 60 × 1000 × 1000
 
-### **Export Video as Image Sequences: **
+### Export Video as Image Sequences: 
 
 `void SetImageSequenceInfo(const std::string output_dir, IMAGE_TYPE image_type)`
 
@@ -170,7 +170,7 @@ image\_type specifies the image format to be used. This can be either .png or .j
 
 
 
-### **Export Selected Frames from Video: **
+### Export Selected Frames from Video: 
 
 `void SetExportFrameSequence(const std::vector <uint64_t>& vec)`
 
@@ -196,21 +196,21 @@ videoStitcher->StartStitch()
 
 ## **Stabilization Parameter Settings**
 
-### **Enable Stabilization: **
+### Enable Stabilization: 
 
 `void EnableFlowState(bool enable)`
 
 This API is used to configure the stabilization option, determining whether to enable stabilization.
 
-### **Enable Direction Lock: **
+### Enable Direction Lock: 
 
 `void EnableDirectionLock(bool enable)`
 
 This API is used to enable direction lock.
 
-## **Stitching Parameter Settings**
+## **Stitching Parameter Settings
 
-### **Stitching Type: **
+### Stitching Type: 
 
 `void SetStitchType(STITCH_TYPE type)`
 
@@ -247,7 +247,7 @@ enum class STITCH_TYPE {
 
 
 
-### **AI Stitching Model: **
+### AI Stitching Model: 
 
 > Note: Deprecated after version 3.1.x
 
@@ -263,7 +263,7 @@ For materials before X4 camera, use the v1 version of the model file. For materi
 
 
 
-### **Chromatic Calibration: **
+### Chromatic Calibration: 
 
 `void EnableStitchFusion(bool enable)`
 
@@ -271,7 +271,7 @@ This API is used to enable Chromatic Calibration.
 
 Causes of chromatic aberration: The two lenses are separate, and the resulting video exposure may not be consistent. When they are stitched together, there will be a more obvious brightness difference. In addition, because the lighting on both sides of the lens is different, the camera exposure is different, and sometimes the pictures taken by the front and back lenses will also have a significant brightness difference. This phenomenon is particularly obvious in places with large light difference ratios. Achromatic aberration is developed to solve this problem.
 
-### **Lens Guard: **
+### Lens Guard: 
 
 `void SetCameraAccessoryType(CameraAccessoryType type)`
 
@@ -313,7 +313,7 @@ This is an AI function that requires the model file path to be passed in.
 
 ## **Image Setting Parameters**
 
-### **Color Plus: **
+### Color Plus: 
 
 `void EnableColorPlus(bool enable, const std::string& model_path)`
 
@@ -323,7 +323,7 @@ This API is used to enable or disable the Color Plus function. This is an AI-bas
 
 > **Model file:** SDK_ROOT_DIR/data/colorplus_model.ins
 
-### **Denoise: **
+### Denoise: 
 
 `void EnableDenoise(bool enable, const std::string& model_path)`
 
@@ -383,7 +383,7 @@ This interface is used to eliminate screen flickering problems caused by lightin
 
 ## **Stitching Process**
 
-### **Stitching Progress Callback: **
+### Stitching Progress Callback: 
 
 `void SetStitchStateCallback(stitch_error_callback callback)`
 
@@ -413,7 +413,7 @@ video_stitcher->SetStitchProgressCallback([&](int process, int error) {
 
 
 
-### **Stitching Error Callback: **
+### Stitching Error Callback: 
 
 `void SetStitchProgressCallback(stitch_process_callback callback)`
 
@@ -431,7 +431,7 @@ video_stitcher->SetStitchStateCallback([&](int error, const char* errinfo) {
 
 
 
-### **Start Stitching: **
+### Start Stitching: 
 
 `void StartStitch()`
 
@@ -439,13 +439,13 @@ This API is used to start the stitching process.
 
 **Note:**Ensure that all parameter settings are completed before calling this API.If this API is executed before setting the necessary parameters, the parameters will not take effect.
 
-### **Cancel Stitching: **
+### Cancel Stitching: 
 
 `bool CancelStitch()`
 
 This API is used to **interrupt the stitching process**.
 
-### **Get Stitching Progress:**
+### Get Stitching Progress:
 
 `int GetStitchProgress() const`
 
@@ -455,13 +455,13 @@ This API is used to **retrieve the stitching progress**.
 
 ## **Logging Functionality**
 
-###  **Set Log Path: **
+###  Set Log Path: 
 
 `void SetLogPath(const std::string log_path)`
 
 This API is primarily used to set the **log file path** in the SDK, allowing SDK log information to be saved.
 
-### **Set Log Print Level: **
+### Set Log Print Level: 
 
 `void SetLogLevel(InsLogLevel level)`
 
