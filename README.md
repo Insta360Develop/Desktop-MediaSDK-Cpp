@@ -83,7 +83,7 @@ This interface primarily sets the root directory for model files, allowing you t
 
 ##  **Input and Output Parameter Settings**
 
-### **Input Path: **
+### *Input Path: *
 
 ` void SetInputPath(std::vector\<std::string>& input_paths)` 
 
