@@ -83,7 +83,7 @@ This interface primarily sets the root directory for model files, allowing you t
 
 ##  **Input and Output Parameter Settings**
 
-### *Input Path: *
+### Input Path: 
 
 ` void SetInputPath(std::vector\<std::string>& input_paths)` 
 
@@ -108,7 +108,7 @@ videoStitcher->SetInputPath(input_path);
 
 For **photo files**, this array can accept multiple inputs **(but not exactly 2)**. If **3, 5,  7 or 9 materials** are input, they are assumed to be **HDR photos**, and **HDR fusion** will be applied automatically. For **X4 cameras**, the **default HDR materials** captured by the camera **have already undergone in-camera HDR fusion**. Therefore, only **one material file** is output from the camera.
 
-### **Output Path: **
+### Output Path: 
 
 `void SetOutputPath(const std::string& output_path)`
 
